@@ -1,0 +1,9 @@
+.f-right{
+    float: right;
+}
+.w-5{
+    width: 20px !important;
+}
+.paginate .item-center .justyfy-between{
+    display: none;
+}

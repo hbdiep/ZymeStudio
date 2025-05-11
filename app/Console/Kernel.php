@@ -13,6 +13,12 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        //cài đặt command chạy theo ngày vào 00h
+        $schedule->command('app:salary')->daily(); 
+        //yearly: 1 năm chạy 1 lần, hourly, monthly
+        //nếu muốn cài đặt để chạy vào 1  thời điểm cụ thể thì thay bằng dấu * và số
+        $schedule->command('app:salary')->cron('20 5 * * *'); 
+        //phút giờ ngày tháng tuần
     }
 
     /**
